@@ -57,6 +57,26 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           },
           child: const Text("Elevated Button"),
         ),
+        GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: () {
+            debugPrint("This is the row");
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Icon(
+                Icons.local_fire_department,
+                color: Colors.blue,
+              ),
+              Text("Row Widget"),
+              Icon(
+                Icons.local_pharmacy,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ),
       ]),
     );
   }
